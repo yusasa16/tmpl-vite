@@ -1,0 +1,12 @@
+@use 'variables' as var;
+
+@mixin container {
+	max-width: 960px;
+	padding: 0 60px;
+	margin-left: auto;
+	margin-right: auto;
+
+	@media (var.$break-sp) {
+		padding: 0 15px;
+	}
+}

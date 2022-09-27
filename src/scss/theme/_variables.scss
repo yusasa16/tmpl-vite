@@ -1,0 +1,24 @@
+/*----------------------------------------------
+	color
+----------------------------------------------*/
+$color-lightest: #fff;
+$color-darkest: #24292e;
+
+$color-font-primary: $color-darkest;
+
+$color-border: #c8c8c8;
+
+
+/*----------------------------------------------
+	font
+----------------------------------------------*/
+$font-family-primary: 'メイリオ', 'Meiryo','ＭＳ ゴシック','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
+
+
+/*----------------------------------------------
+	breakpoint
+----------------------------------------------*/
+$break-point: 767;
+
+$break-pc: 'min-width: #{$break-point + 1}px';
+$break-sp: 'max-width: #{$break-point}px';
