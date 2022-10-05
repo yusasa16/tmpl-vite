@@ -1,0 +1,25 @@
+@use 'theme' as *;
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.44rem;
+	font-family: $font-family-primary;
+	color: $color-font-primary;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+img {
+	max-width: 100%;
+}
+
+picture {
+	> img {
+		vertical-align: bottom;
+	}
+}
