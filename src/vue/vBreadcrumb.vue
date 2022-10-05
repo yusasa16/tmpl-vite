@@ -1,3 +1,6 @@
+<script setup lang="ts">
+</script>
+
 <template>
 	<ol itemscope itemtype="https://schema.org/BreadcrumbList" class="v-breadcrumb">
 		<li itemscope itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="v-breadcrumb__item">
@@ -20,9 +23,7 @@
 		</li>
 	</ol>
 </template>
-<script>
 
-</script>
 <style lang="scss">
 @use '../scss/theme' as *;
 
