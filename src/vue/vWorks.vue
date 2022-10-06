@@ -1,11 +1,4 @@
-<template>
-	<ul class="v-works">
-		<li v-for="(work, index) in works" :key="index" class="v-works__item">
-			<img :src="rootPath + work.src" :alt="work.alt">
-		</li>
-	</ul>
-</template>
-<script>
+<script lang="ts">
 export default {
 	props: {
 		rootPath: {
@@ -20,6 +13,15 @@ export default {
 	},
 }
 </script>
+
+<template>
+	<ul class="v-works">
+		<li v-for="(work, index) in works" :key="index" class="v-works__item">
+			<img :src="rootPath + work.src" :alt="work.alt">
+		</li>
+	</ul>
+</template>
+
 <style lang="scss">
 @use '../scss/theme' as *;
 

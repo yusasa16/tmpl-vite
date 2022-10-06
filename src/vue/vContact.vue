@@ -1,3 +1,6 @@
+<script lang="ts">
+</script>
+
 <template>
 	<form class="v-contact">
 		<div class="v-contact__input">
@@ -25,11 +28,7 @@
 		</div>
 	</form>
 </template>
-<script>
-export default {
 
-}
-</script>
 <style lang="scss">
 @use '../scss/theme' as *;
 

@@ -1,3 +1,37 @@
+
+<script lang="ts">
+	export default {
+		props: {
+			rootPath: {
+				type: String,
+				default: ''
+			}
+		},
+		data() {
+			return {
+				navList: [
+					{
+						href: '/about/',
+						name: 'About'
+					},
+					{
+						href: '/works/',
+						name: 'Works'
+					},
+					{
+						href: '/news/',
+						name: 'News'
+					},
+					{
+						href: '/contact/',
+						name: 'Contact'
+					},
+				]
+			}
+		},
+	}
+</script>
+
 <template>
 	<header class="v-header">
 		<div class="v-header__inner">
@@ -18,38 +52,7 @@
 		</div>
 	</header>
 </template>
-<script>
-export default {
-	props: {
-		rootPath: {
-			type: String,
-			default: ''
-		}
-	},
-	data() {
-		return {
-			navList: [
-				{
-					href: '/about/',
-					name: 'About'
-				},
-				{
-					href: '/works/',
-					name: 'Works'
-				},
-				{
-					href: '/news/',
-					name: 'News'
-				},
-				{
-					href: '/contact/',
-					name: 'Contact'
-				},
-			]
-		}
-	},
-}
-</script>
+
 <style lang="scss">
 @use '../scss/theme' as *;
 

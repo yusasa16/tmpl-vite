@@ -1,18 +1,20 @@
+<script lang="ts">
+	export default {
+		props: {
+			rootPath: {
+				type: String,
+				default: ''
+			}
+		},
+	}
+</script>
+
 <template>
 	<h2 class="v-heading2">
 		<slot />
 	</h2>
 </template>
-<script>
-export default {
-	props: {
-		rootPath: {
-			type: String,
-			default: ''
-		}
-	},
-}
-</script>
+
 <style lang="scss">
 @use '../scss/theme' as *;
 

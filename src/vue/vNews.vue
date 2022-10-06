@@ -1,14 +1,4 @@
-<template>
-	<ul class="v-news">
-		<li v-for="(i, index) in newsCount" :key="index" class="v-news__item">
-			<a :href="i.href">
-				<time class="v-news__item-time" :datetime="i.date.year + '-' + i.date.month + '-' + i.date.date">{{ i.date.year }}.{{ i.date.month }}.{{ i.date.date }}</time>
-				<p class="v-news__item-title">{{ i.title }}</p>
-			</a>
-		</li>
-	</ul>
-</template>
-<script>
+<script lang="ts">
 export default {
 	props: {
 		displayNum: {
@@ -35,6 +25,18 @@ export default {
 	}
 }
 </script>
+
+<template>
+	<ul class="v-news">
+		<li v-for="(i, index) in newsCount" :key="index" class="v-news__item">
+			<a :href="i.href">
+				<time class="v-news__item-time" :datetime="i.date.year + '-' + i.date.month + '-' + i.date.date">{{ i.date.year }}.{{ i.date.month }}.{{ i.date.date }}</time>
+				<p class="v-news__item-title">{{ i.title }}</p>
+			</a>
+		</li>
+	</ul>
+</template>
+
 <style lang="scss">
 @use '../scss/theme' as *;
 

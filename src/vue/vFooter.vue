@@ -1,9 +1,4 @@
-<template>
-	<footer class="v-footer">
-		<small class="v-footer__copy">© {{ copyYear }} My Work</small>
-	</footer>
-</template>
-<script>
+<script lang="ts">
 export default {
 	props: {
 		rootPath: {
@@ -18,7 +13,14 @@ export default {
 		}
 	}
 }
-</script>
+	</script>
+
+	<template>
+	<footer class="v-footer">
+		<small class="v-footer__copy">© {{ copyYear }} My Work</small>
+	</footer>
+</template>
+
 <style lang="scss">
 @use '../scss/theme' as *;
 
