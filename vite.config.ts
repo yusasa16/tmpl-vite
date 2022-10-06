@@ -5,9 +5,9 @@ import vue from '@vitejs/plugin-vue'
 export default defineConfig({
 	root: 'htdocs',
   build: {
-    outDir: 'dist',
+    outDir: '../dist',
   },
-	publicDir: "public",
+	publicDir: "../public",
 
 	server: {
 		host: true,
