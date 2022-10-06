@@ -1,21 +1,13 @@
-<script lang="ts">
-export default {
-	props: {
-		rootPath: {
-			type: String,
-			default: ''
-		}
-	},
-	computed: {
-		copyYear: () => {
-			const now = new Date();
-			return now.getFullYear();
-		}
-	}
-}
-	</script>
+<script setup lang="ts">
+import { computed } from "@vue/reactivity"
 
-	<template>
+const copyYear = computed(() => {
+		const now = new Date();
+		return now.getFullYear();
+})
+</script>
+
+<template>
 	<footer class="v-footer">
 		<small class="v-footer__copy">© {{ copyYear }} My Work</small>
 	</footer>

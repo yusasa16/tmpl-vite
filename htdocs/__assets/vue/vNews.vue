@@ -1,29 +1,26 @@
-<script lang="ts">
-export default {
-	props: {
-		displayNum: {
-			default: false
-		},
-		rootPath: {
-			type: String,
-			default: ''
-		}
+<script setup lang="ts">
+import { useStore } from 'vuex'
+import { computed } from "@vue/reactivity";
+
+const props = defineProps({
+	displayNum: {
+		default: false
 	},
-	data() {
-		return {
-			news: this.$store.state.news
-		}
-	},
-	computed: {
-		newsCount (){
-			if (this.displayNum) {
-				return this.news.slice(0, this.displayNum);
-			} else {
-				return this.news;
-			}
-		}
+	rootPath: {
+		type: String,
+		default: ''
 	}
-}
+});
+
+const store = useStore();
+const news = store.state.news;
+const newsCount = computed(() => {
+	if (props.displayNum) {
+		return news.slice(0, props.displayNum);
+	} else {
+		return news;
+	}
+})
 </script>
 
 <template>

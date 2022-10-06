@@ -1,12 +1,4 @@
-<script lang="ts">
-	export default {
-		props: {
-			rootPath: {
-				type: String,
-				default: ''
-			}
-		},
-	}
+<script setup lang="ts">
 </script>
 
 <template>

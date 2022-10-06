@@ -1,23 +1,21 @@
-<script lang="ts">
-export default {
-	props: {
-		rootPath: {
-			type: String,
-			default: ''
-		}
-	},
-	data() {
-		return {
-			works: this.$store.state.works
-		}
-	},
-}
+<script setup lang="ts">
+import { useStore } from 'vuex'
+
+const props = defineProps({
+	rootPath: {
+		type: String,
+		default: ''
+	}
+});
+
+const store = useStore();
+const works = store.state.works;
 </script>
 
 <template>
 	<div class="v-works02">
 		<article v-for="(work, index) in works" :key="index" class="v-works02__item">
-			<img :src="rootPath + work.src" :alt="work.alt">
+			<img :src="props.rootPath + work.src" :alt="work.alt">
 			<h2 class="v-works02__title">{{ work.title }}</h2>
 			<div v-html="work.content" class="v-works02__content"></div>
 		</article>

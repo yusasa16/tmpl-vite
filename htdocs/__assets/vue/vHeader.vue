@@ -1,35 +1,29 @@
-
-<script lang="ts">
-	export default {
-		props: {
-			rootPath: {
-				type: String,
-				default: ''
-			}
-		},
-		data() {
-			return {
-				navList: [
-					{
-						href: '/about/',
-						name: 'About'
-					},
-					{
-						href: '/works/',
-						name: 'Works'
-					},
-					{
-						href: '/news/',
-						name: 'News'
-					},
-					{
-						href: '/contact/',
-						name: 'Contact'
-					},
-				]
-			}
-		},
+<script setup lang="ts">
+const props = defineProps({
+	rootPath: {
+		type: String,
+		default: ''
 	}
+});
+
+const navList = [
+	{
+		href: '/about/',
+		name: 'About'
+	},
+	{
+		href: '/works/',
+		name: 'Works'
+	},
+	{
+		href: '/news/',
+		name: 'News'
+	},
+	{
+		href: '/contact/',
+		name: 'Contact'
+	},
+];
 </script>
 
 <template>
@@ -38,7 +32,7 @@
 			<h1 class="v-header__logo">
 				<a href="/">
 					<picture>
-						<img :src="rootPath + '/img/common/logo-header.svg'" alt="My Work">
+						<img :src="props.rootPath + '/img/common/logo-header.svg'" alt="My Work">
 					</picture>
 				</a>
 			</h1>
