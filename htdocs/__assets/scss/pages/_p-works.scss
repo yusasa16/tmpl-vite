@@ -1,0 +1,9 @@
+@use '../theme' as *;
+
+.p-works {
+	&__works {
+		@include container;
+
+		margin-bottom: 200px;
+	}
+}

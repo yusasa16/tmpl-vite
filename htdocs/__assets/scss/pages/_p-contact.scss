@@ -1,0 +1,8 @@
+@use '../theme' as *;
+
+.p-contact {
+	&__contact {
+		@include container;
+		margin-bottom: 245px;
+	}
+}

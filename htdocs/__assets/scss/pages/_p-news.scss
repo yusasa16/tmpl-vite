@@ -1,0 +1,9 @@
+@use '../theme' as *;
+
+.p-news {
+	&__news {
+		@include container;
+
+		margin-bottom: 137px;
+	}
+}

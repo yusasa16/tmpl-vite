@@ -1,0 +1,12 @@
+@use '../theme' as *;
+
+.p-about {
+	&__main {
+		@include container;
+		margin-bottom: 200px;
+
+		p {
+			margin: 38px 0;
+		}
+	}
+}
