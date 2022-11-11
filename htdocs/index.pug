@@ -1,0 +1,34 @@
+html(lang="js")
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		title Document
+		link(rel="preconnect" href="https://fonts.gstatic.com")
+		link(href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300&amp;family=Noto+Sans+JP:wght@100;300;400;700&amp;display=swap" rel="stylesheet")
+		link(rel="stylesheet" href="/css/style.scss")
+	body
+		#header
+			v-header
+
+		main#main
+			article.p-index
+				.p-index__mv
+					picture
+						img(src="/img/index/pict-mv.jpg" alt="")
+
+				section.p-index__works
+					v-heading2 works
+					v-works
+					p.p-index__link
+						a(href="__URL__") See More
+
+				section.p-index__news
+					v-heading2 news
+					v-news(display-num="3")
+
+		#footer
+			v-footer
+
+		script(type="module" src="/js/main.ts")
+

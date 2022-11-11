@@ -1,6 +1,7 @@
 import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import pugPlugin from '@macropygia/vite-plugin-pug-static'
 
 const root = resolve(__dirname, 'htdocs');
 const outDir = resolve(__dirname, 'dist');
@@ -15,8 +16,8 @@ export default defineConfig({
     outDir,
 		rollupOptions: {
 			input: {
-				index: resolve(root, 'index.html'),
-				about: resolve(root, 'about', 'index.html')
+				index: resolve(root, 'index.pug'),
+				about: resolve(root, 'about', 'index.pug')
 			}
 		}
   },
@@ -26,7 +27,17 @@ export default defineConfig({
 		port: 3000,
 	},
 
-  plugins: [vue()],
+  plugins: [
+		vue(),
+		pugPlugin({
+			buildOptions: {
+				basedir: root,
+			},
+			serveOptions: {
+				basedir: root,
+			}
+		})
+	],
 
 	resolve: {
 		alias: {
