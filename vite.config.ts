@@ -2,6 +2,7 @@ import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import pugPlugin from '@macropygia/vite-plugin-pug-static'
+import inputPlugin from '@macropygia/vite-plugin-glob-input'
 
 const root = resolve(__dirname, 'htdocs');
 const outDir = resolve(__dirname, 'dist');
@@ -15,10 +16,11 @@ export default defineConfig({
   build: {
     outDir,
 		rollupOptions: {
-			input: {
-				index: resolve(root, 'index.pug'),
-				about: resolve(root, 'about', 'index.pug')
-			}
+			// inputPluginというプラグインに置き換え
+			// input: {
+			// 	index: resolve(root, 'index.pug'),
+			// 	about: resolve(root, 'about', 'index.pug')
+			// }
 		}
   },
 
@@ -36,7 +38,13 @@ export default defineConfig({
 			serveOptions: {
 				basedir: root,
 			}
-		})
+		}),
+		inputPlugin({
+			patterns: [
+				`${root}/**/[^_]*.pug`,
+				`${root}/**/*.html`,
+			],
+		}),
 	],
 
 	resolve: {
