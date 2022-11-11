@@ -53,3 +53,6 @@ export default defineConfig({
 		},
 	},
 })
+
+// pug関係参考
+// https://qiita.com/macropygia/items/d37fd20a16fcef26914b
