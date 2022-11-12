@@ -44,6 +44,11 @@ export default defineConfig({
 				`${root}/**/[^_]*.pug`,
 				`${root}/**/*.html`,
 			],
+			options: {
+				ignore: [
+					`${root}/**/*_bk.html`
+				]
+			}
 		}),
 	],
 
